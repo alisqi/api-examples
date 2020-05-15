@@ -8,7 +8,7 @@ $setId		= 133;
 $client = new GuzzleHttp\Client();
 
 // Get results using the URL provided by the in-app documentation
-$response = $client->request('GET', "https://example.alis-asp.nl/alis/api/getResults?authToken=$authToken&setId=$setId");
+$response = $client->request('GET', "https://example.alis-asp.nl/alis/api/getResults?authToken=$authToken&setId=$setId&filter=%7B%22status_%22%3A%5B%7B%22value%22%3A3%7D%5D%7D");
 
 echo "Status {$response->getStatusCode()} {$response->getReasonPhrase()}\n";
 
