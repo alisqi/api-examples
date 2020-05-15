@@ -1,0 +1,16 @@
+{
+  "name": "alis-api-examples",
+  "version": "1.0.0",
+  "description": "Alis API examples",
+  "main": "-",
+  "dependencies": {
+    "form-data": "^3.0.0",
+    "node-fetch": "^2.6.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jeroen Versteeg <jeroen.versteeg@alis.nl>",
+  "license": "MIT"
+}
