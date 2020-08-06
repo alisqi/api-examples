@@ -8,11 +8,11 @@ def editResults():
 	setId		= 123
 
 	# As explained in storeResults.py, it doesn't matter where we put data (params or data),
-	# as long as it's properly escaped
+	# as long as they're properly escaped
 	response = requests.post(
-		'https://example.alis-asp.nl/alis/api/storeResults',
+		'https://example.alis-asp.nl/alis/api/storeResults',,
+		headers={'Authorization': 'Bearer ' + authToken}
 		params = {
-			'authToken': authToken,
 			'setId': setId,
 			'keyField': 'batchnumber_'
 		},

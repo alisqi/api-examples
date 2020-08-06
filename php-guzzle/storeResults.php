@@ -5,8 +5,10 @@ require_once 'vendor/autoload.php';
 $client = new GuzzleHttp\Client([
 	'base_uri'	=> 'https://example.alis-asp.nl/alis/api/',
 	'query'		=> [
-		'authToken'	=> '27c340e57a4d73fbb0f86947abe13d49',
-		'setId'		=> 123,
+		'setId' => 123,
+	],
+	'headers'	=> [
+		'Authorization' => "Bearer $authToken",
 	],
 ]);
 
