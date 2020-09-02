@@ -11,6 +11,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Jeroen Versteeg <jeroen.versteeg@alis.nl>",
+  "author": "Jeroen Versteeg <jeroen@alisqi.com>",
   "license": "MIT"
 }

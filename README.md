@@ -1,5 +1,5 @@
 # Alis API example code
-This repository contains examples in multiple languages for using the [Alis API](https://www.alis.nl/en/product/alis-api).
+This repository contains examples in multiple languages for using the [Alis API](https://www.alisqi.com/en/product/alis-api).
 
 These are meant to illustrate the ease of use, and to help you avoid common pitfalls.
 Note that we do not provide support for this code, nor do we guarantee its correctness or security.
