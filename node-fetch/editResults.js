@@ -10,8 +10,9 @@ const setId = 123;
  * Instead of using URLSearchParams or FormData, let's encode by hand this time!
  * Don't forget to include the Content-Type header
  * 
- * authToken and setId don't need escaping due to their contents, but results
+ * access_token and setId don't need escaping due to their contents, but results
  * certainly does!
+ * (The recommended method of using the token is the Authorization header as shown in getResults.js and storeResults.js)
  */
 const results = [{		// same as ../results-edit.json
   "batchnumber_": "1337",
@@ -22,8 +23,9 @@ fetch(`https://example.alis-asp.nl/alis/api/storeResults`, {
 	method:	'POST',
 	headers:	{
 		'Content-Type':	'application/x-www-form-urlencoded',
+		'Authorization': 'Bearer ' + authToken,
 	},
-	body:	`authToken=${authToken}&setId=${setId}&keyField=batchnumber_&editOnly=true` +
+	body:	`access_token=${authToken}&setId=${setId}&keyField=batchnumber_&editOnly=true` +
 		`&results=` + querystring.escape(JSON.stringify(results))
 })
 	.then(res => res.json())
