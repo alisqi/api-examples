@@ -10,7 +10,7 @@ $client = new GuzzleHttp\Client();
  * Contrary to the code in storeResults.php, we'll add both the authentication token and setId to the post body,
  * just to show that both are supported.
  */
-$response = $client->request('POST', 'https://example.alis-asp.nl/alis/api/storeResults', [
+$response = $client->request('POST', 'https://example.alisqi.com/api/storeResults', [
 	'form_params' => [
 		'access_token'	=> '27c340e57a4d73fbb0f86947abe13d49',
 		'setId'		=> 133,

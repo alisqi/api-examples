@@ -1,7 +1,7 @@
 {
-  "name": "alis-api-examples",
+  "name": "alisqi-api-examples",
   "version": "1.0.0",
-  "description": "Alis API examples",
+  "description": "AlisQI API examples",
   "main": "-",
   "dependencies": {
     "form-data": "^3.0.0",

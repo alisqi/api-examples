@@ -1,6 +1,6 @@
 #!/bin/bash
 
-baseurl=https://example.alis-asp.nl/alis/api/
+baseurl=https://example.alisqi.com/api/
 authtoken=27c340e57a4d73fbb0f86947abe13d49
 setid=123
 
@@ -8,17 +8,17 @@ setid=123
 # Using Content-Type application/x-www-form-urlencoded
 #
 
-# We pass access_token and setId in the query string and put results in the POST body
-# (Putting the access_token in the query string is not recommended! See below for a better method)
+# We pass authtoken and setId in the query string and put results in the POST body
+# (Putting the authtoken in the query string is not recommended! See below for a better method)
 # We let curl do encoding by using --data-urlencode
-curl "${baseurl}storeResults?access_token=${authtoken}&setId=${setid}" \
+curl "${baseurl}storeResults?authtoken=${authtoken}&setId=${setid}" \
   --data-urlencode results@../results-new.json
 
-# Alternatively, we can also put access_token and setId in the POST body
-# We _could_ use -d (or --data) for access_token and setId because they are alphanumeric only and don't need URL-encoding
+# Alternatively, we can also put authtoken and setId in the POST body
+# We _could_ use -d (or --data) for authtoken and setId because they are alphanumeric only and don't need URL-encoding
 # for results, we really need to make sure data is properly encoded
 curl "${baseurl}storeResults" \
-  -d authToken="$authtoken" --data setId="$setid" \
+  -d access_token="$authtoken" --data setId="$setid" \
   --data-urlencode results@../results-new.json
 
 # If you're sure results content is already properly encoded, you can also use -d
@@ -37,7 +37,7 @@ curl "${baseurl}storeResults" \
 # Note that we're NOT using results=@results-new.json, which would upload the file
 # Also note that the Bearer authorization spec (https://tools.ietf.org/html/rfc6750#section-2.2)
 # says that clients "MUST NOT" put the token in the post body when using this content type!
-# Alis does support it, but the recommended method is to use the Authorization header.
+# AlisQI does support it, but the recommended method is to use the Authorization header.
 curl "${baseurl}storeResults" \
   -H "Authorization: Bearer ${authtoken}" \
   -F setId="$setid" \

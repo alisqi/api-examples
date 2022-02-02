@@ -19,11 +19,10 @@ const results = [{		// same as ../results-edit.json
   "status_": "Completed"
 }];
 
-fetch(`https://example.alis-asp.nl/alis/api/storeResults`, {
+fetch(`https://example.alisqi.com/api/storeResults`, {
 	method:	'POST',
 	headers:	{
 		'Content-Type':	'application/x-www-form-urlencoded',
-		'Authorization': 'Bearer ' + authToken,
 	},
 	body:	`access_token=${authToken}&setId=${setId}&keyField=batchnumber_&editOnly=true` +
 		`&results=` + querystring.escape(JSON.stringify(results))

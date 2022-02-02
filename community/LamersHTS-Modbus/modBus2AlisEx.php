@@ -27,7 +27,7 @@ function upload2Alis($data)
 	$ch = curl_init();
 	$headers = array("Content-Type:multipart/form-data");
 	curl_setopt($ch, CURLOPT_HTTPHEADER , $headers);
-	curl_setopt($ch, CURLOPT_URL, "https://customer.alis-asp.nl/alis/api/storeResults");
+	curl_setopt($ch, CURLOPT_URL, "https://customer.alisqi.com/api/storeResults");
 	curl_setopt($ch, CURLOPT_POST, 1);
 	curl_setopt($ch, CURLOPT_POSTFIELDS, $postArr); 
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);

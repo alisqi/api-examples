@@ -10,7 +10,7 @@ def editResults():
 	# As explained in storeResults.py, it doesn't matter where we put data (params or data),
 	# as long as they're properly escaped
 	response = requests.post(
-		'https://example.alis-asp.nl/alis/api/storeResults',,
+		'https://example.alisqi.com/api/storeResults',,
 		headers={'Authorization': 'Bearer ' + authToken}
 		params = {
 			'setId': setId,

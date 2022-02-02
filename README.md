@@ -20,4 +20,4 @@ Each example performs the following steps
 # Community examples
 Some of our users have graciously shared some of their code and experience with us.
 
- * [Reading particle sensor measurements over Modbus](community/LamersHTS-Modbus) and uploading these to Alis
+ * [Reading particle sensor measurements over Modbus](community/LamersHTS-Modbus) and uploading these to AlisQI

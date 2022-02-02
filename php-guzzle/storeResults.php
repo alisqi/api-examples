@@ -3,7 +3,7 @@
 require_once 'vendor/autoload.php';
 
 $client = new GuzzleHttp\Client([
-	'base_uri'	=> 'https://example.alis-asp.nl/alis/api/',
+	'base_uri'	=> 'https://example.alisqi.com/api/',
 	'query'		=> [
 		'setId' => 123,
 	],

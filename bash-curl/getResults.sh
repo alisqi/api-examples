@@ -1,6 +1,6 @@
 #!/bin/bash
 
-baseurl=https://example.alis-asp.nl/alis/api/
+baseurl=https://example.alisqi.com/api/
 authtoken=27c340e57a4d73fbb0f86947abe13d49
 setid=123
 
