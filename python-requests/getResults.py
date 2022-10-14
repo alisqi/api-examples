@@ -17,7 +17,7 @@ def getResults():
 	# The recommended method is to use the Authorization header
 	# This applies to every API operation
 	requests.get(
-		'http://localhost:8008/alis/api/getResults?setId={setId}'.format(setId=setId),
+		'https://example.alisqi.com/api/getResults?setId={setId}'.format(setId=setId),
 		headers={'Authorization': 'Bearer ' + authToken}
 	)
 
